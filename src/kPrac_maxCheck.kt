@@ -1,9 +1,32 @@
 fun main ( args : Array<String>){
 	/*
- 		1. Å©±â 5ÀÎ Array »ý¼º
- 		2. fun maxCheck ÇÔ¼ö¿¡ ¸Å°³º¯¼ö Array
- 		3. maxCheck ¿¡¼­ ¿À¸§Â÷¼øÀ¸·Î Á¤·Ä ÈÄ Array ¹ÝÈ¯
+ 		1. Å©ï¿½ï¿½ 5ï¿½ï¿½ Array ï¿½ï¿½ï¿½ï¿½
+ 		2. fun maxCheck ï¿½Ô¼ï¿½ï¿½ï¿½ ï¿½Å°ï¿½ï¿½ï¿½ï¿½ï¿½ Array
+ 		3. maxCheck ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ Array ï¿½ï¿½È¯
  		4. println Array
 	 */
 	
+	var inputArray = arrayOf(20,30,50,40,10)
+	//var anotherArray = Array<Int>(5,{0})
+	
+	var outputArray = maxCheck(inputArray)
+	for(value in outputArray){
+		print(value)
+		print(" ")
+	}
+	
 }
+
+fun maxCheck(inputArray: Array<Int>) : Array<Int>{
+	for(i in 0..inputArray.size-1){
+		for(j in 0..inputArray.size-1){
+			if(inputArray[i]<inputArray[j]){
+				var temp:Int = inputArray[i]
+				inputArray[i]=inputArray[j]
+				inputArray[j]=temp
+			}
+		}
+	}
+	return inputArray
+}
+
