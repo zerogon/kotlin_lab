@@ -11,8 +11,7 @@ fun main ( args : Array<String>){
 	
 	var outputArray = maxCheck(inputArray)
 	for(value in outputArray){
-		print(value)
-		print(" ")
+		print("$value ")
 	}
 	
 }

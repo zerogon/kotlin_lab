@@ -5,7 +5,7 @@ fun main(argv: Array<String>) {
 
 	//기본변수는 null을 가질 수 없음
 	var c: Int? = null
-
+	
 	val arrayList = ArrayList<String>()
 	arrayList.add("list_add")
 	for (s in arrayList) {
